@@ -1,0 +1,52 @@
+# online-ddl configuration
+
+sharding-db = "mbk_order_bj,mbk_order_sh,mbk_order_gz,mbk_order_cd,mbk_order_gl"
+sharding-table = "mbk_orders_"
+sharding-count = 256
+
+do-ddl = "ALTER TABLE `%s`.`%s` ADD COLUMN `EXTEND3` varchar(10) COMMENT '扩展预留字段3';"
+undo-ddl = "ALTER TABLE `%s`.`%s` DROP COLUMN `EXTEND3`;"
+token = "EXTEND3"
+
+worker-count = 40
+pool-size = 40
+
+report-interval = 1
+
+log-level = "info"
+
+[[dbs]]
+host = "10.3.3.129"
+user = "root"
+password = ""
+name = "mbk_order_bj"
+port = 3306
+
+[[dbs]]
+host = "10.3.3.129"
+user = "root"
+password = ""
+name = "mbk_order_sh"
+port = 3306
+
+[[dbs]]
+host = "10.3.3.129"
+user = "root"
+password = ""
+name = "mbk_order_gz"
+port = 3306
+
+[[dbs]]
+host = "10.3.3.129"
+user = "root"
+password = ""
+name = "mbk_order_cd"
+port = 3306
+
+[[dbs]]
+host = "10.3.3.129"
+user = "root"
+password = ""
+name = "mbk_order_gl"
+port = 3306
+
