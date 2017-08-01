@@ -1,23 +1,8 @@
-hash: f724aabcc0a79a4e8bab048fcf05cfc1110e909ebb62926c8da08be27dba3372
-updated: 2017-05-24T14:49:32.225449871+08:00
+hash: c36939351dbf79ae0cb921aa9548a56c0f5053caac50736faafa2259b4090b57
+updated: 2017-08-01T18:44:25.267869291+08:00
 imports:
-- name: github.com/beorn7/perks
-  version: 3ac7bf7a47d159a033b107610db8a1b6575507a4
-  subpackages:
-  - quantile
 - name: github.com/BurntSushi/toml
   version: 99064174e013895bbd9b025c31100bd1d9b590ca
-- name: github.com/coreos/etcd
-  version: ea5f6dab6b1d07e22cf46bf5f5088d567548c124
-  subpackages:
-  - auth/authpb
-  - clientv3
-  - clientv3/concurrency
-  - etcdserver/api/v3rpc/rpctypes
-  - etcdserver/etcdserverpb
-  - mvcc/mvccpb
-  - pkg/monotime
-  - pkg/tlsutil
 - name: github.com/go-sql-driver/mysql
   version: 4ac31a97ccff97de60ba3c630bfb4733c1bb6d0e
 - name: github.com/golang/protobuf
@@ -27,20 +12,12 @@ imports:
   - proto
 - name: github.com/golang/snappy
   version: 723cc1e459b8eea2dea4583200fd60757d40097a
-- name: github.com/grpc-ecosystem/grpc-gateway
-  version: 84398b94e188ee336f307779b57b3aa91af7063c
-  subpackages:
-  - runtime
-  - runtime/internal
-  - utilities
 - name: github.com/juju/errors
   version: 6f54ff6318409d31ff16261533ce2c8381a4fd5d
-- name: github.com/matttproud/golang_protobuf_extensions
-  version: c12348ce28de40eed0136aa2b644d0ee0650e56c
-  subpackages:
-  - pbutil
 - name: github.com/ngaut/log
   version: cec23d3e10b016363780d894a0eb732a12c06e02
+- name: github.com/ngaut/pool
+  version: 440660161f02291a5f955d3d92dd3dd56b9c47a9
 - name: github.com/petar/GoLLRB
   version: 53be0d36a84c2a886ca057d34b6aa4468df9ccb4
   subpackages:
@@ -62,57 +39,25 @@ imports:
   - leveldb/storage
   - leveldb/table
   - leveldb/util
-- name: github.com/pingcap/kvproto
-  version: 289050a4366f95497c93d4dba068989b5dd8781a
-  subpackages:
-  - pkg/metapb
-  - pkg/pdpb
-- name: github.com/pingcap/pd
-  version: fea29e342c4a7c5888cdf0b569625fbbf6d3b50f
-  subpackages:
-  - pd-client
 - name: github.com/pingcap/tidb
   version: 2c07a47f229314ac2ccfb78607d218759a77a050
   subpackages:
   - ast
   - context
   - ddl
-  - expression
   - infoschema
-  - inspectkv
   - kv
-  - meta
-  - meta/autoid
   - model
   - mysql
   - parser
   - parser/opcode
-  - perfschema
-  - privilege
-  - sessionctx/binloginfo
   - sessionctx/variable
-  - sessionctx/varsutil
-  - structure
-  - table
-  - table/tables
-  - tablecodec
   - terror
   - util
   - util/charset
-  - util/codec
-  - util/encrypt
   - util/hack
-  - util/mock
-  - util/mvmap
-  - util/stringutil
   - util/types
   - util/types/json
-- name: github.com/pingcap/tipb
-  version: 37bbffad21f347c02af7d822909832f0eed39c85
-  subpackages:
-  - go-binlog
-  - go-tipb
-  - sharedbytes
 - name: github.com/prometheus/client_golang
   version: c5b7fccd204277076155f10851dad72b76a49317
   subpackages:
@@ -145,17 +90,10 @@ imports:
   - mysql
   - packet
   - replication
-- name: github.com/twinj/uuid
-  version: 70cac2bcd273ef6a371bb96cde363d28b68734c3
 - name: golang.org/x/net
   version: e90d6d0afc4c315a0d87a568ae68577cc15149a0
   subpackages:
   - context
-  - http2
-  - http2/hpack
-  - internal/timeseries
-  - lex/httplex
-  - trace
 - name: golang.org/x/text
   version: 723492b65e225eafcba054e76ba18bb9c5ac1ea2
   subpackages:
