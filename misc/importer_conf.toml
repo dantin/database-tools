@@ -1,0 +1,41 @@
+# Importer Configuration.
+
+table-sql = """CREATE TABLE oo (
+  oid int primary key,
+  uid int comment '[[range=1,100]]',
+  bid int comment '[[range=1,100]]',
+  st_x double comment '[[range=-180,180]]',
+  st_y double comment '[[range=-180,180]]',
+  st_t datetime DEFAULT NULL,
+  tdi int(11),
+  c double,
+  tdu int(20),
+  en_t datetime DEFAULT '1999-12-12 00:00:02',
+  en_x double comment '[[range=-180,180]]',
+  en_y double comment '[[range=-180,180]]',
+  tfe double,
+  rs char(1),
+  lm int(21),
+  ts timestamp NULL DEFAULT '1999-12-12 08:00:02',
+  ide int comment '[[set=0,1]]',
+  tl char(1),
+  p tinyint(1),
+  cc varchar(8),
+  ac varchar(8),
+  bt int(2)
+);"""
+
+index-sql = "create index i_u on oo(uid);"
+
+log-level = "info"
+
+worker-count = 20
+job-count = 10000
+batch = 1000
+
+[db]
+host = "10.3.3.129"
+user = "root"
+password = ""
+name = "sbtest"
+port = 3306
