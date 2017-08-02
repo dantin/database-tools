@@ -6,12 +6,15 @@ LDFLAGS += -X "github.com/dantin/database-tools/utils.GitHash=$(shell git rev-pa
 CURDIR := $(shell pwd)
 GO := go
 
-.PHONY: build importer bulk_ddl
+.PHONY: build importer bulk-ddl db-config
 
-build: importer bulk_ddl
+build: importer bulk-ddl db-config
 
 importer:
 	$(GO) build -ldflags '$(LDFLAGS)' -o bin/importer cmd/importer/main.go
 
-bulk_ddl:
-	$(GO) build -ldflags '$(LDFLAGS)' -o bin/bulk_ddl cmd/bulk_ddl/main.go
+bulk-ddl:
+	$(GO) build -ldflags '$(LDFLAGS)' -o bin/bulk-ddl cmd/bulk-ddl/main.go
+
+db-config:
+	$(GO) build -ldflags '$(LDFLAGS)' -o bin/db-config cmd/db-config/main.go
