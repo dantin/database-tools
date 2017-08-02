@@ -14,7 +14,7 @@ import (
 
 func NewConfig() *Config {
 	cfg := &Config{}
-	cfg.FlagSet = flag.NewFlagSet("bulk_ddl", flag.ContinueOnError)
+	cfg.FlagSet = flag.NewFlagSet("bulk-ddl", flag.ContinueOnError)
 	fs := cfg.FlagSet
 
 	fs.StringVar(&cfg.configFile, "config", "", "Config File")
@@ -88,7 +88,7 @@ func (c *Config) Parse(arguments []string) error {
 	}
 
 	if c.printVersion {
-		fmt.Printf(utils.GetRawInfo("bulk_ddl"))
+		fmt.Printf(utils.GetRawInfo("bulk-ddl"))
 		return flag.ErrHelp
 	}
 
